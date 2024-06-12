@@ -1,0 +1,48 @@
+{
+	"schemaVersion": 1,
+	"id": "powerglove",
+	"version": "${version}",
+	"name": "PowerGlove",
+	"description": "A simple mod that adds a block-activating glove.",
+	"authors": [
+		"Raptorox"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": "https://github.com/Raptorox/PowerGlove"
+	},
+	"license": "MIT",
+	"icon": "assets/powerglove/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "powerglove.PowerGlove",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "powerglove.PowerGloveClient",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"powerglove.mixins.json",
+		{
+			"config": "powerglove.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-language-kotlin": ">=1.9.23"
+	},
+	"suggests": {
+
+	}
+}
